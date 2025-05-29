@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Descargar App Lz</title>
+  <!-- Font Awesome CDN -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-pVn0vca9YX9ZQzTbzX2YVpmBz+c+dq1MbFZ+yRUv8nS7wo+ZohOBWqplU3xR6JsA+Q5Z6kHvDw1I8xU6fSK9fQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    .slider {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      background-color: black;
+    }
+
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      animation: zoomFade 16s infinite;
+      opacity: 0;
+      transform: scale(1.2);
+      transition: opacity 1s ease-in-out;
+    }
+
+    .slide:nth-child(1) {
+      background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgfn9lHAZdSPzA4dy7QoRn1BF9CEq8Pu1wWOZYh9mrziPb80t_hv0tISVkJLRODTjhONcEIDfJY4VPlnuZl-d9bZWxg3pmKuh2pQMJwB3HhrQAIIrC6CihPprrHgtYSellyvaQQmwqhy8evjkX0PnEd5RWnXnpqA1fZwCw4Gg75IBVLkVXUL5I5oZITiEIU/s1080/3BB5ISVA7BKJXLPIG3SX74CEPA.png');
+      animation-delay: 0s;
+    }
+
+    .slide:nth-child(2) {
+      background-image: url('https://media.a24.com/p/376a350ba507169934331ae8292014e5/adjuntos/296/imagenes/007/963/0007963382/10-paginas-para-ver-peliculas-online.jpeg');
+      animation-delay: 8s;
+    }
+	
+	
+
+    @keyframes zoomFade {
+      0% {
+        opacity: 0;
+        transform: scale(1.2);
+      }
+      10% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      40% {
+        opacity: 1;
+        transform: scale(1.05);
+      }
+      60% {
+        opacity: 0;
+        transform: scale(1.1);
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: -1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+    }
+
+    p {
+      font-size: 1.4rem;
+      margin-bottom: 40px;
+      max-width: 600px;
+      font-weight: 600;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 35px;
+      font-size: 1.3rem;
+      color: white;
+      background-color: #1db954;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.3s;
+      box-shadow: 0 5px 15px rgba(29, 185, 84, 0.4);
+      font-weight: bold;
+      user-select: none;
+    }
+
+    .btn:hover {
+      background-color: #17a64a;
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(23, 166, 74, 0.6);
+    }
+
+    .btn:active {
+      transform: scale(0.95);
+      box-shadow: 0 4px 12px rgba(17, 120, 54, 0.6);
+    }
+
+    footer {
+      position: absolute;
+      bottom: 10px;
+      font-size: 0.9rem;
+      color: #ccc;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    }
+	
+	.description-container {
+    background-color: rgba(30, 30, 30, 0.85); /* gris muy oscuro con transparencia */
+    padding: 15px 25px;
+    border-radius: 12px;
+    display: inline-block; /* para que el ancho se ajuste al texto */
+    margin-bottom: 40px; /* espacio abajo */
+  }
+
+  /* Ajustamos el p dentro para que no tenga margen extra */
+  .description-container p {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #ddd; /* un gris claro para mejor contraste */
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+  }
+  
+  /* Animación de palomitas cayendo */
+
+.popcorn {
+  position: fixed;
+  top: -50px;
+  width: var(--size);
+  height: var(--size);
+  pointer-events: none;
+  user-select: none;
+  animation-name: fallAndSway;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: var(--fall-duration);
+  animation-delay: var(--delay);
+  z-index: 9999;
+  filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.5));
+}
+
+@keyframes fallAndSway {
+  0% {
+    transform: translateX(0) translateY(-50px) rotate(0deg);
+    opacity: 1;
+  }
+  25% {
+    transform: translateX(15px) translateY(25vh) rotate(15deg);
+  }
+  50% {
+    transform: translateX(-15px) translateY(50vh) rotate(-10deg);
+    opacity: 0.8;
+  }
+  75% {
+    transform: translateX(10px) translateY(75vh) rotate(10deg);
+  }
+  100% {
+    transform: translateX(0) translateY(110vh) rotate(0deg);
+    opacity: 0.6;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+  <div class="slider">
+    <div class="slide"></div>
+    <div class="slide"></div>
+  </div>
+  <div class="overlay"></div>
+
+  
+<div class="content">
+  <h1>Descargar LzPlay </h1>
+  <br>
+  <!-- Nuevo contenedor para la descripción -->
+  <div class="description-container">
+    <p>La aplicacion de entretenimiento totalmente gratis para ti. Disfruta peliculas y series al instante.
+	</p><p>Att:<span>LzPlay</span></p>
+  </div>
+  <a class="btn" href="https://github.com/LzRdrgz0001/LzPlay-Apk-Download/releases/download/v1.0/Preciona-Para-Descargar_LZPLAY.apk" download>
+    <i class="fas fa-download"></i> Descargar APK
+  </a>
+  <footer>Hecho por LzPlay 2025</footer>
+</div>
+
+<div id="popcorn-container"></div>
+
+<script>
+  const popcornContainer = document.getElementById('popcorn-container');
+
+  // Dos URLs diferentes de imagen de palomita
+  const popcornImgs = [
+    'https://static.wikia.nocookie.net/clubpenguin/images/0/00/Palomitas_de_Maiz_icono.png/revision/latest?cb=20140207143242&path-prefix=es',
+    'https://static.vecteezy.com/system/resources/thumbnails/042/236/044/small_2x/ai-generated-popcorn-in-striped-box-isolated-on-transparent-background-png.png'
+  ];
+
+  const maxPopcorn = 30;
+
+  function random(min, max) {
+    return Math.random() * (max - min) + min;
+  }
+
+  for(let i = 0; i < maxPopcorn; i++) {
+    const popcorn = document.createElement('img');
+    popcorn.classList.add('popcorn');
+
+    const size = random(12, 28);
+    popcorn.style.setProperty('--size', size + 'px');
+
+    popcorn.style.left = random(0, 100) + 'vw';
+    popcorn.style.setProperty('--fall-duration', random(6, 12) + 's');
+    popcorn.style.setProperty('--delay', random(0, 12) + 's');
+
+    // Elegir aleatoriamente una imagen de las dos
+    popcorn.src = popcornImgs[Math.floor(Math.random() * popcornImgs.length)];
+    popcorn.alt = 'palomita';
+
+    popcornContainer.appendChild(popcorn);
+  }
+</script>
+
+
+</body>
+</html>
