@@ -3,375 +3,67 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>LzPlay Download</title>
-
-  <meta name="apple-mobile-web-app-title" content="LzPlay Download">
-  <meta name="application-name" content="LzPlay Download">
-
-  <meta property="og:title" content="LzPlay Download" />
-  <meta property="og:description" content="Descarga gratis LzPlay y disfruta películas y series sin pagar. ❤️S🇻" />
-  <meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgLqPrfgG8vchY61aR3je4PfT2LV1zdhcT4N6XEk_KGFEvwVLC0ULl1m3611kZeE8Kj6L2tkDTI6icH4jI7xF0A_9s-Svoavwi9_mV58ielk4MGMbCkfvB24RT7e87fsg7qA4lbZOEenrLEB6lizkJ2m6vkZfZ2tSFL6kqrnEuCAjCU7k0y9xMxnQXFt4sv/s1290/WhatsApp%20Image%202025-06-06%20at%201.59.31%20AM.jpeg" />
-  <meta property="og:url" content="https://lzrdrgz01.github.io/download-LzPlay/" />
-  <meta property="og:type" content="website" />
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="LzPlay Download">
-  <meta name="twitter:description" content="Descarga gratis LzPlay y disfruta películas y series sin pagar. ❤️🇸🇻">
-  <meta name="twitter:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgLqPrfgG8vchY61aR3je4PfT2LV1zdhcT4N6XEk_KGFEvwVLC0ULl1m3611kZeE8Kj6L2tkDTI6icH4jI7xF0A_9s-Svoavwi9_mV58ielk4MGMbCkfvB24RT7e87fsg7qA4lbZOEenrLEB6lizkJ2m6vkZfZ2tSFL6kqrnEuCAjCU7k0y9xMxnQXFt4sv/s1290/WhatsApp%20Image%202025-06-06%20at%201.59.31%20AM.jpeg">
-
-  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/831/831250.png" />
-  <script src="https://kit.fontawesome.com/6d61cfde73.js" crossorigin="anonymous"></script>
-
+  <title>Redirección a LzPlay</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body, html {
-      height: 100%;
-      font-family: Arial, sans-serif;
-      overflow: hidden;
-    }
-
-    .slider {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -2;
-      background-color: black;
-    }
-
-    .slide {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-size: cover;
-      background-position: center;
-      animation: zoomFade 16s infinite;
-      opacity: 0;
-      transform: scale(1.2);
-      transition: opacity 1s ease-in-out;
-    }
-
-    .slide:nth-child(1) {
-      background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgfn9lHAZdSPzA4dy7QoRn1BF9CEq8Pu1wWOZYh9mrziPb80t_hv0tISVkJLRODTjhONcEIDfJY4VPlnuZl-d9bZWxg3pmKuh2pQMJwB3HhrQAIIrC6CihPprrHgtYSellyvaQQmwqhy8evjkX0PnEd5RWnXnpqA1fZwCw4Gg75IBVLkVXUL5I5oZITiEIU/s1080/3BB5ISVA7BKJXLPIG3SX74CEPA.png');
-      animation-delay: 0s;
-    }
-
-    .slide:nth-child(2) {
-      background-image: url('https://media.a24.com/p/376a350ba507169934331ae8292014e5/adjuntos/296/imagenes/007/963/0007963382/10-paginas-para-ver-peliculas-online.jpeg');
-      animation-delay: 8s;
-    }
-	
-	
-
-    @keyframes zoomFade {
-      0% {
-        opacity: 0;
-        transform: scale(1.2);
-      }
-      10% {
-        opacity: 1;
-        transform: scale(1);
-      }
-      40% {
-        opacity: 1;
-        transform: scale(1.05);
-      }
-      60% {
-        opacity: 0;
-        transform: scale(1.1);
-      }
-      100% {
-        opacity: 0;
-      }
-    }
-
-    .overlay {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.8);
-      z-index: -1;
-    }
-
-    .content {
-      position: relative;
-      z-index: 1;
-      height: 100%;
+    body {
+      background-color: #000;
+      color: #ffd700;
+      font-family: 'Segoe UI', sans-serif;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
-      color: #fff;
+      flex-direction: column;
+      height: 100vh;
       text-align: center;
-      padding: 20px;
+      margin: 0;
     }
 
     h1 {
-      font-size: 3rem;
+      font-size: 2em;
       margin-bottom: 10px;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+      animation: fadeIn 1s ease-in-out;
     }
 
     p {
-      font-size: 1.4rem;
-      margin-bottom: 40px;
-      max-width: 600px;
-      font-weight: 600;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+      font-size: 1.2em;
+      margin-bottom: 20px;
+      animation: fadeIn 2s ease-in-out;
     }
 
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 15px 35px;
-      font-size: 1.3rem;
-      color: white;
-      background-color: #1db954;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      text-decoration: none;
-      transition: background 0.3s, transform 0.3s;
-      box-shadow: 0 5px 15px rgba(29, 185, 84, 0.4);
+    .contador {
+      font-size: 2.5em;
       font-weight: bold;
-      user-select: none;
+      animation: pop 1s infinite;
     }
 
-    .btn:hover {
-      background-color: #17a64a;
-      transform: scale(1.05);
-      box-shadow: 0 8px 20px rgba(23, 166, 74, 0.6);
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
-    .btn:active {
-      transform: scale(0.95);
-      box-shadow: 0 4px 12px rgba(17, 120, 54, 0.6);
+    @keyframes pop {
+      0%, 100% { transform: scale(1); color: #ffd700; }
+      50% { transform: scale(1.3); color: #fff; }
     }
-
-    footer {
-      position: absolute;
-      bottom: 10px;
-      font-size: 0.9rem;
-      color: #ccc;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-    }
-	
-	.description-container {
-    background-color: rgba(30, 30, 30, 0.85); /* gris muy oscuro con transparencia */
-    padding: 15px 25px;
-    border-radius: 12px;
-    display: inline-block; /* para que el ancho se ajuste al texto */
-    margin-bottom: 40px; /* espacio abajo */
-  }
-
-  /* Ajustamos el p dentro para que no tenga margen extra */
-  .description-container p {
-    margin: 0;
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: #ddd; /* un gris claro para mejor contraste */
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
-  }
-  
-  /* Animación de palomitas cayendo */
-
-.popcorn {
-  position: fixed;
-  top: -50px;
-  width: var(--size);
-  height: var(--size);
-  pointer-events: none;
-  user-select: none;
-  animation-name: fallAndSway;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-duration: var(--fall-duration);
-  animation-delay: var(--delay);
-  z-index: 9999;
-  filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.5));
-}
-
-@keyframes fallAndSway {
-  0% {
-    transform: translateX(0) translateY(-50px) rotate(0deg);
-    opacity: 1;
-  }
-  25% {
-    transform: translateX(15px) translateY(25vh) rotate(15deg);
-  }
-  50% {
-    transform: translateX(-15px) translateY(50vh) rotate(-10deg);
-    opacity: 0.8;
-  }
-  75% {
-    transform: translateX(10px) translateY(75vh) rotate(10deg);
-  }
-  100% {
-    transform: translateX(0) translateY(110vh) rotate(0deg);
-    opacity: 0.6;
-  }
-}
-
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
-  }
-
-  .description-container p {
-    font-size: 1rem;
-  }
-
-  .btn {
-    font-size: 1rem;
-    padding: 12px 20px;
-    flex-direction: row;
-    gap: 8px;
-    width: 90%;
-    max-width: 300px;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .content {
-    padding: 10px;
-  }
-
-  .description-container {
-    margin-bottom: 30px;
-    padding: 12px 18px;
-  }
-
-  footer {
-    position: static;
-    margin-top: 30px;
-    font-size: 0.8rem;
-  }
-
-  .slide {
-    background-position: center center;
-    background-size: cover;
-  }
-
-  .btn i {
-    font-size: 1rem;
-  }
-}
-
   </style>
-
-  <script>
-    // Bloquea clic derecho y combinaciones para ver código
-    document.addEventListener('contextmenu', e => e.preventDefault());
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'F12' || 
-          (e.ctrlKey && e.shiftKey && ['i', 'j', 'c'].includes(e.key.toLowerCase())) ||
-          (e.ctrlKey && e.key.toLowerCase() === 'u')) {
-        e.preventDefault();
-      }
-    });
-
-    // Protección anti inspección solo en PC
-    (function() {
-      var isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-      if (!isMobile) {
-        let threshold = 160;
-        setInterval(() => {
-          const widthThreshold = window.outerWidth - window.innerWidth > threshold;
-          const heightThreshold = window.outerHeight - window.innerHeight > threshold;
-          if (widthThreshold || heightThreshold) {
-            try { window.close(); } catch {}
-            window.location.href = 'about:blank';
-          }
-        }, 1000);
-      }
-    })();
-
-    // 🔐 Solo habilita botón para iPhone
-    window.onload = function () {
-      var isIphone = /iPhone/i.test(navigator.userAgent);
-      var btnIphone = document.getElementById('btn-iphone');
-
-      if (!isIphone && btnIphone) {
-        btnIphone.removeAttribute('href');
-        btnIphone.removeAttribute('target');
-        btnIphone.style.backgroundColor = '#888';
-        btnIphone.style.cursor = 'not-allowed';
-        btnIphone.onclick = function (e) {
-          e.preventDefault();
-          alert('⚠️ Este botón solo está disponible en dispositivos iPhone.');
-        };
-      }
-    };
-  </script>
 </head>
 <body>
-
-  <div class="slider">
-    <div class="slide"></div>
-    <div class="slide"></div>
-  </div>
-  <div class="overlay"></div>
-
-  <div class="content">
-    <h1>Descargar LzPlay</h1>
-    <br>
-    <div class="description-container">
-      <p>Es un sitio gratuito, apoyando a todas las personas que no pueden pagar un cine o una plataforma Streaming.
-        Aunque nuestro contenido es limitado, esperamos que con lo poco se pueda hacer feliz a muchas personas. 🥰
-      </p>
-      <p>Att: <span>LzPlay</span></p>
-    </div>
-
-    <a class="btn" href="https://github.com/LzRdrgz01/enlacedescarga/releases/download/v4.1.1/LzPlay-actualizado.4.1.1.apk" download rel="noopener noreferrer">
-      <i class="fas fa-download"></i> Descargar APK
-    </a>
-
-    <!-- ✅ Solo iPhone -->
-    <a id="btn-iphone" class="btn" href="https://zinecia.github.io/Home/" target="_blank" rel="noopener noreferrer" style="margin-top: 20px;">
-      <i class="fas fa-desktop"></i> Sitio únicamente iPhone
-    </a>
-
-    <a class="btn" href="https://linktr.ee/LzRdrg1" target="_blank" rel="noopener noreferrer" style="margin-top: 20px;">
-      <i class="fas fa-network-wired"></i> Redes Sociales
-    </a>
-
-    <footer>Hecho por LzPlay 2025</footer>
-  </div>
-
-  <div id="popcorn-container"></div>
+  <h1>Gracias por visitarnos!</h1>
+  <p>Serás redirigido al nuevo dominio oficial de <strong>LzPlay</strong> en unos segundos</p>
+  <div class="contador" id="contador">5</div>
 
   <script>
-    const popcornContainer = document.getElementById('popcorn-container');
-    const popcornImgs = [
-      'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhKfXlF_ofds7syYZ4mMUQfksoJ_KKoex3Z_WW9E_4lqyNaWdlzgKEVBCdPKaiwX40nQOhTt7iCkWuWRhK54ijou8VW5ePJV4yNGGrOZLt5yBoGDU9dV6hpghd_oFe22crQVHNB-DWBc-SjwUHRD1yE3cqlTzqL5DLmUm7-14CV597mO2Ts1Bdl7EO4IFwX/s980/popcorn-isolated-on-transparent-background-free-png.webp',
-      'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjEJNNyMooU1KoINrZZxzaKd4BCwMUFUM8DePuWKk10wCdZIrhzvb_11ATlYWEwPHD9e6UsBEcXuFCEBzcUEFBrXi7rHIAHYmN5hMhWTJQooop8TFNI1PrP2JSCW1vGzb0VMqWX3TmTxarC4DtcluVQiI4wS6eEYTPcyADalsScsEP3IMJLviZNk8yhH4Do/s512/2468825.png'
-    ];
+    var segundos = 5;
+    var contador = document.getElementById("contador");
 
-    const maxPopcorn = 30;
-    function random(min, max) {
-      return Math.random() * (max - min) + min;
-    }
-
-    for (let i = 0; i < maxPopcorn; i++) {
-      const popcorn = document.createElement('img');
-      popcorn.classList.add('popcorn');
-      const size = random(12, 28);
-      popcorn.style.setProperty('--size', size + 'px');
-      popcorn.style.left = random(0, 100) + 'vw';
-      popcorn.style.setProperty('--fall-duration', random(6, 12) + 's');
-      popcorn.style.setProperty('--delay', random(0, 12) + 's');
-      popcorn.src = popcornImgs[Math.floor(Math.random() * popcornImgs.length)];
-      popcorn.alt = 'palomita';
-      popcornContainer.appendChild(popcorn);
-    }
+    var interval = setInterval(function() {
+      segundos--;
+      contador.textContent = segundos;
+      if (segundos <= 0) {
+        clearInterval(interval);
+        window.location.href = "https://www.lzplay.lat";
+      }
+    }, 1000);
   </script>
-
 </body>
 </html>
